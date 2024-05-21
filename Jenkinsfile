@@ -75,7 +75,7 @@ pipeline {
         // Destroy Environment
         stage('Terraform Destroy') {
             steps {
-                sh 'terraform destroy'
+                sh 'terraform destroy -y'
                 // sh 'terraform destroy --var-file=prod.tfvars --auto-approve'
             }
         }
